@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
 import "./Works.css";
 import Upwork from "../../img/Upwork.png";
+import NewWave from "../../img/New Wave logo.jpg";
 import Fiverr from "../../img/fiverr.png";
 import Amazon from "../../img/amazon.png";
 import Shopify from "../../img/Shopify.png";
 import Facebook from "../../img/Facebook.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import {Link} from 'react-scroll'
+import { Link } from "react-scroll";
 const Works = () => {
   // context
   const theme = useContext(themeContext);
@@ -25,14 +26,16 @@ const Works = () => {
           </span>
           <span>Brands & Clients</span>
           <spane>
-            Lorem ispum is simpley dummy text of printing of printing Lorem
+            Since I am React front developer with 10 years of building websites
             <br />
-            ispum is simpley dummy text of printingLorem ispum is simpley dummy
-            text
+            and web applications using react js and modern javascript
+            frameworks.
             <br />
-            y dummy text of printingLorem
+            sofar ive collaborated with over 300+ product terms and backend
             <br />
-            ispum is simpley dummy text of printing
+            developers to execute new features and create Api end points
+            <br />
+            request/response payloads
           </spane>
           <Link to="contact" smooth={true} spy={true}>
             <button className="button s-button">Hire Me</button>
@@ -60,7 +63,7 @@ const Works = () => {
             <img src={Fiverr} alt="" />
           </div>
           <div className="w-secCircle">
-            <img src={Amazon} alt="" />
+            <img src={NewWave} alt="" />
           </div>{" "}
           <div className="w-secCircle">
             <img src={Shopify} alt="" />

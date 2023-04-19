@@ -3,6 +3,10 @@ import "./Intro.css";
 import Vector1 from "../../img/Vector1.png";
 import Vector2 from "../../img/Vector2.png";
 import boy from "../../img/boy.png";
+// // import bloodykheeng from "../../img/bloodykheeng.png";
+// import bloodykheeng from "../../img/PicsArt_04-19-06.50.24.png";
+// import bloodykheeng from "../../img/selfie_PicsArt_04-19-06.55.04.png";
+import bloodykheeng from "../../img/69955065.jpeg";
 import glassesimoji from "../../img/glassesimoji.png";
 import thumbup from "../../img/thumbup.png";
 import crown from "../../img/crown.png";
@@ -13,6 +17,7 @@ import Instagram from "../../img/instagram.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+
 const Intro = () => {
   // Transition
   const transition = { duration: 2, type: "spring" };
@@ -28,10 +33,10 @@ const Intro = () => {
         <div className="i-name">
           {/* yahan change hy darkmode ka */}
           <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
-          <span>Andrew Thomas</span>
+          <span>Bloody Kheeng</span>
           <span>
-            Frontend Developer with high level of experience in web designing
-            and development, producting the Quality work
+            I am a Software Developer with high level of experience in designing
+            useful, approachable user interfaces.
           </span>
         </div>
         <Link to="contact" smooth={true} spy={true}>
@@ -48,7 +53,7 @@ const Intro = () => {
       <div className="i-right">
         <img src={Vector1} alt="" />
         <img src={Vector2} alt="" />
-        <img src={boy} alt="" />
+        <img className="myimage" src={bloodykheeng} alt="" />
         {/* animation */}
         <motion.img
           initial={{ left: "-36%" }}
@@ -86,7 +91,7 @@ const Intro = () => {
             top: "17rem",
             width: "21rem",
             height: "11rem",
-            left: "-9rem",
+            left: "-9rem"
           }}
         ></div>
       </div>

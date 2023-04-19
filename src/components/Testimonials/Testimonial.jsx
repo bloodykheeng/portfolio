@@ -10,28 +10,33 @@ import profilePic2 from "../../img/profile2.jpg";
 import profilePic3 from "../../img/profile3.jpg";
 import profilePic4 from "../../img/profile4.jpg";
 
+import client1 from "../../img/client1.avif";
+import client2 from "../../img/client2.jpeg";
+import client3 from "../../img/client3.webp";
+import client4 from "../../img/client4.webp";
+
 const Testimonial = () => {
   const clients = [
     {
-      img: profilePic1,
+      img: client1,
       review:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis! Eaque dicta minima, iure maiores dolorum sed.",
+        "Bk You Know What , You’re really good at following up with the client so as to ensure that they are never left in the dark. Keep it up!."
     },
     {
-      img: profilePic2,
+      img: client2,
       review:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis! Eaque dicta minima, iure maiores dolorum sed.",
+        "Your loyal customer base is outstanding. Customers often ask for you by name and you have a lot of repeat customers as a result. Great job!."
     },
     {
-      img: profilePic3,
+      img: client3,
       review:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis! Eaque dicta minima, iure maiores dolorum sed.",
+        "Bk I cant believe that Even when customers are difficult, you still manage to give them feedback in a timely and constructive manner.."
     },
     {
-      img: profilePic4,
+      img: client4,
       review:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis! Eaque dicta minima, iure maiores dolorum sed.",
-    },
+        "You have the natural ability to understand and feel what your customers are experiencing, and you are able to meet their needs effectively. Well done!."
+    }
   ];
 
   return (
@@ -40,9 +45,11 @@ const Testimonial = () => {
         <span>Clients always get </span>
         <span>Exceptional Work </span>
         <span>from me...</span>
-      <div className="blur t-blur1" style={{ background: "var(--purple)" }}></div>
-      <div className="blur t-blur2" style={{ background: "skyblue" }}></div>
-
+        <div
+          className="blur t-blur1"
+          style={{ background: "var(--purple)" }}
+        ></div>
+        <div className="blur t-blur2" style={{ background: "skyblue" }}></div>
       </div>
       <Swiper
         // install Swiper modules
@@ -54,7 +61,14 @@ const Testimonial = () => {
           return (
             <SwiperSlide key={index}>
               <div className="testimonial">
-                <img src={client.img} alt="" />
+                <div
+                  style={{
+                    background: `url(${client.img})`,
+                    backgroundSize: "cover"
+                  }}
+                  className="testimonialImage"
+                ></div>
+
                 <span>{client.review}</span>
               </div>
             </SwiperSlide>

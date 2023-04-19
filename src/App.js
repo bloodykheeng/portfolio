@@ -10,6 +10,8 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import { useContext } from "react";
 import { themeContext } from "./Context";
+import Drift from "react-driftjs";
+
 function App() {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
@@ -18,7 +20,7 @@ function App() {
       className="App"
       style={{
         background: darkMode ? "black" : "",
-        color: darkMode ? "white" : "",
+        color: darkMode ? "white" : ""
       }}
     >
       <Navbar />
@@ -28,7 +30,8 @@ function App() {
       <Works />
       <Portfolio />
       <Testimonial />
-      <Contact />
+      {/* <Contact /> */}
+      <Drift appId="n5g59y7awvaw" />;
       <Footer />
     </div>
   );
