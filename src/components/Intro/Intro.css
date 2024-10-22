@@ -1,7 +1,8 @@
 .Intro {
   display: flex;
   height: 77vh;
-  margin-top: 6rem;
+  /* margin-top: 6rem; */
+  margin-top: 20vh;
 }
 
 /* left side styling */

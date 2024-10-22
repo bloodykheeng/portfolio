@@ -9,6 +9,11 @@ import Facebook from "../../img/Facebook.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+
+//
+import laravel from "../../img/works/laravel.png";
+import react from "../../img/works/React_Native_Logo.png";
+import ug_gov from "../../img/works/ug_gov.jpg";
 const Works = () => {
   // context
   const theme = useContext(themeContext);
@@ -21,25 +26,29 @@ const Works = () => {
       <div className="w-left">
         <div className="awesome">
           {/* dark Mode */}
-          <span style={{ color: darkMode ? "white" : "" }}>
-            Works for All these
-          </span>
+          <span style={{ color: darkMode ? "white" : "" }}>Some of the</span>
           <span>Brands & Clients</span>
-          <spane>
-            Since I am React front developer with 10 years of building websites
+          <span>I work with</span>
+          <span style={{ color: darkMode ? "white" : "" }}>
+            Through my journey, I have worked on various web development
             <br />
-            and web applications using react js and modern javascript
-            frameworks.
+            projects using React.js and modern JavaScript frameworks.
             <br />
-            sofar ive collaborated with over 300+ product terms and backend
+            These projects have helped numerous companies achieve their goals,
             <br />
-            developers to execute new features and create Api end points
+            while also allowing me to grow and gain valuable experience.
             <br />
-            request/response payloads
-          </spane>
-          <Link to="contact" smooth={true} spy={true}>
+            So far, I’ve had the privilege of collaborating with many different
+            <br />
+            companies to execute diverse tasks, implement new features,
+            <br />
+            and create intuitive user interfaces that enhance user experiences.
+          </span>
+
+          <a href="mailto:kimerafarouk8@gmail.com">
             <button className="button s-button">Hire Me</button>
-          </Link>
+          </a>
+
           <div
             className="blur s-blur1"
             style={{ background: "#ABF1FF94" }}
@@ -57,19 +66,64 @@ const Works = () => {
           className="w-mainCircle"
         >
           <div className="w-secCircle">
-            <img src={Upwork} alt="" />
+            <img
+              src={react}
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: "50%"
+              }}
+            />
           </div>
           <div className="w-secCircle">
-            <img src={Fiverr} alt="" />
+            <img
+              src={laravel}
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: "50%"
+              }}
+            />
           </div>
           <div className="w-secCircle">
-            <img src={NewWave} alt="" />
+            <img
+              src={NewWave}
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: "50%"
+              }}
+            />
           </div>{" "}
           <div className="w-secCircle">
-            <img src={Shopify} alt="" />
+            <img
+              src={ug_gov}
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: "50%"
+              }}
+            />
           </div>
           <div className="w-secCircle">
-            <img src={Facebook} alt="" />
+            <img
+              src={Facebook}
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: "50%"
+              }}
+            />
           </div>
         </motion.div>
         {/* background Circles */}

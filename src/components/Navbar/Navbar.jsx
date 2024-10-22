@@ -1,52 +1,165 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import Toggle from "../Toggle/Toggle";
 import "./Navbar.css";
 import { Link } from "react-scroll";
-const navbar = () => {
+import { themeContext } from "../../Context";
+import { FiMenu, FiX } from "react-icons/fi"; // Hamburger icons
+
+const Navbar = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleOutsideClick = () => {
+    setIsMobileMenuOpen(false); // Close the mobile menu when clicking outside
+  };
+
   return (
-    <div className="n-wrapper" id="Navbar">
+    <div
+      className="n-wrapper"
+      id="Navbar"
+      style={{ backgroundColor: darkMode ? "#333" : "#fff" }}
+    >
       {/* left */}
       <div className="n-left">
-        <div className="n-name">BK</div>
+        <div className="n-name" style={{ color: darkMode ? "#fff" : "#000" }}>
+          BoodyKheeng
+        </div>
         <Toggle />
       </div>
+
       {/* right */}
       <div className="n-right">
+        {/* Desktop menu */}
         <div className="n-list">
-          <ul style={{ listStyleType: "none" }}>
-            <li>
-              <Link activeClass="active" to="Navbar" spy={true} smooth={true}>
+          <div className="n-links-container">
+            <span className="n-link">
+              <Link activeClass="active" to="Intro" spy={true} smooth={true}>
                 Home
               </Link>
-            </li>
-            <li>
-              <Link to="services" spy={true} smooth={true}>
-                Serivces
+            </span>
+            <span className="n-link">
+              <Link activeClass="active" to="services" spy={true} smooth={true}>
+                Services
               </Link>
-            </li>
-            <li>
-              <Link to="works" spy={true} smooth={true}>
+            </span>
+            <span className="n-link">
+              <Link activeClass="active" to="works" spy={true} smooth={true}>
                 Experience
               </Link>
-            </li>
-            <li>
-              <Link to="portfolio" spy={true} smooth={true}>
-                Protfolio
+            </span>
+            <span className="n-link">
+              <Link activeClass="active" to="projects" spy={true} smooth={true}>
+                Projects
               </Link>
-            </li>
-            <li>
-              <Link to="testimonial" spy={true} smooth={true}>
-                Testimonial
+            </span>
+            <span className="n-link">
+              <Link
+                activeClass="active"
+                to="testimonial"
+                spy={true}
+                smooth={true}
+              >
+                Testimonials
               </Link>
-            </li>
-          </ul>
+            </span>
+          </div>
         </div>
-        <Link to="contact" spy={true} smooth={true}>
-          <button className="button n-button">Contact</button>
-        </Link>
+
+        {/* Contact button */}
+        <div className="nav-contact-btn">
+          <a
+            href="https://wa.me/256774542872"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              className="button n-button"
+              style={{ color: darkMode ? "#fff" : "#000" }}
+            >
+              Contact
+            </button>
+          </a>
+        </div>
+
+        {/* Hamburger icon (mobile) */}
+        <div className="hamburger-icon" onClick={handleMenuToggle}>
+          {isMobileMenuOpen ? (
+            <FiX size={30} color={darkMode ? "#fff" : "#000"} />
+          ) : (
+            <FiMenu size={30} color={darkMode ? "#fff" : "#000"} />
+          )}
+        </div>
+
+        {/* Mobile menu */}
+        {isMobileMenuOpen && (
+          <div className="mobile-menu" onClick={handleOutsideClick}>
+            <div className="mobile-links-container">
+              <span className="mobile-link">
+                <Link
+                  activeClass="active"
+                  to="Intro"
+                  spy={true}
+                  smooth={true}
+                  onClick={handleOutsideClick}
+                >
+                  Home
+                </Link>
+              </span>
+              <span className="mobile-link">
+                <Link
+                  activeClass="active"
+                  to="services"
+                  spy={true}
+                  smooth={true}
+                  onClick={handleOutsideClick}
+                >
+                  Services
+                </Link>
+              </span>
+              <span className="mobile-link">
+                <Link
+                  activeClass="active"
+                  to="works"
+                  spy={true}
+                  smooth={true}
+                  onClick={handleOutsideClick}
+                >
+                  Experience
+                </Link>
+              </span>
+              <span className="mobile-link">
+                <Link
+                  activeClass="active"
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  onClick={handleOutsideClick}
+                >
+                  Projects
+                </Link>
+              </span>
+              <span className="mobile-link">
+                <Link
+                  activeClass="active"
+                  to="testimonial"
+                  spy={true}
+                  smooth={true}
+                  onClick={handleOutsideClick}
+                >
+                  Testimonials
+                </Link>
+              </span>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
-export default navbar;
+export default Navbar;

@@ -4,7 +4,7 @@ import Services from "./components/Services/Services";
 import "./App.css";
 import Experience from "./components/Experience/Experience";
 import Works from "./components/Works/Works";
-import Portfolio from "./components/Portfolio/Portfolio";
+import Projects from "./components/Projects/Projects";
 import Testimonial from "./components/Testimonials/Testimonial";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -24,14 +24,16 @@ function App() {
       }}
     >
       <Navbar />
-      <Intro />
-      <Services />
-      <Experience />
-      <Works />
-      <Portfolio />
-      <Testimonial />
-      {/* <Contact /> */}
-      <Drift appId="n5g59y7awvaw" />;
+      <div className="app-container">
+        <Intro />
+        <Services />
+        <Experience />
+        <Works />
+        <Projects />
+        <Testimonial />
+        {/* <Contact /> */}
+        <Drift appId="n5g59y7awvaw" />
+      </div>
       <Footer />
     </div>
   );

@@ -12,9 +12,14 @@
 }
 
 .App{
-    padding: 0.5rem 3.5rem;
-    overflow: hidden;
-    color: var(--black);    
+  /* padding: 0.5rem 3.5rem; */
+  overflow: hidden;
+  color: var(--black);  
+}
+
+.app-container{
+  padding: 0.5rem 1rem;
+
 }
 
 .button {
@@ -35,11 +40,30 @@
   }
   @media screen and (max-width: 480px) {
     .App {
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 0.2rem;
 
     }
   }
 
   
 
-  
+   /*============ custom scrollbar =========== */
+::-webkit-scrollbar {
+  width: 20px;
+  height: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}

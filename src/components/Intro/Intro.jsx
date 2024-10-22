@@ -34,19 +34,46 @@ const Intro = () => {
           {/* yahan change hy darkmode ka */}
           <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
           <span>BK</span>
-          <span>
-            I am a Software Developer with high level of experience in designing
-            useful, approachable user interfaces.
+          <span style={{ color: darkMode ? "white" : "black" }}>
+            I am a versatile Full Stack Software Developer, passionate about
+            creating intuitive user experiences through UI/UX design. I
+            specialize in React.js, Laravel, and MySQL, with a proven ability to
+            develop seamless, responsive, and visually engaging applications
+            that meet both user needs and business objectives.
           </span>
         </div>
-        <Link to="contact" smooth={true} spy={true}>
-          <button className="button i-button">Hire me</button>
-        </Link>
+
+        <a
+          href="https://ko-fi.com/bloodykheeng"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="button">Hire me or Buy me a Coffee ☕☕☕</button>
+        </a>
+
         {/* social icons */}
         <div className="i-icons">
-          <img src={Github} alt="" />
-          <img src={LinkedIn} alt="" />
-          <img src={Instagram} alt="" />
+          <a
+            href="https://github.com/bloodykheeng"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Github} alt="Github" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kimerafarouk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={LinkedIn} alt="LinkedIn" />
+          </a>
+          <a
+            href="https://www.instagram.com/bloody_kheeng/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Instagram} alt="Instagram" />
+          </a>
         </div>
       </div>
       {/* right image side */}
@@ -80,7 +107,7 @@ const Intro = () => {
           className="floating-div"
         >
           {/* floatinDiv mein change hy dark mode ka */}
-          <FloatinDiv img={thumbup} text1="Best Design" text2="Award" />
+          <FloatinDiv img={thumbup} text1="UI/UX" text2="Expert" />
         </motion.div>
 
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
