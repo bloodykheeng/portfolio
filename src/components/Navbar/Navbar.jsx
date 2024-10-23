@@ -97,7 +97,14 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="mobile-menu" onClick={handleOutsideClick}>
+          <div
+            className="mobile-menu"
+            onClick={handleOutsideClick}
+            style={{
+              backgroundColor: darkMode ? "#333" : "#fff", // Set background color dynamically
+              color: darkMode ? "#fff" : "#000" // Adjust text color accordingly
+            }}
+          >
             <div className="mobile-links-container">
               <span className="mobile-link">
                 <Link

@@ -37,12 +37,46 @@ const Footer = () => {
       <img src={Wave} alt="" style={{ width: "100%" }} />
       <div className="f-content">
         <span>
-          <span>kimerafarouk@nwt.ug</span>
+          <a
+            href="mailto:kimerafarouk@nwt.ug"
+            style={{
+              cursor: "pointer",
+              textDecoration: "none",
+              color: "inherit"
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "blue")}
+            onMouseLeave={(e) => (e.target.style.color = "inherit")}
+          >
+            kimerafarouk@nwt.ug
+          </a>
           <br />
-          <span>kimerafarouk8@nwt.ug</span>
+          <a
+            href="mailto:kimerafarouk8@nwt.ug"
+            style={{
+              cursor: "pointer",
+              textDecoration: "none",
+              color: "inherit"
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "blue")}
+            onMouseLeave={(e) => (e.target.style.color = "inherit")}
+          >
+            kimerafarouk8@nwt.ug
+          </a>
           <br />
-          <span>bloodykheeng@gmail.com</span>
+          <a
+            href="mailto:bloodykheeng@gmail.com"
+            style={{
+              cursor: "pointer",
+              textDecoration: "none",
+              color: "inherit"
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "blue")}
+            onMouseLeave={(e) => (e.target.style.color = "inherit")}
+          >
+            bloodykheeng@gmail.com
+          </a>
         </span>
+
         <div className="f-icons">
           <a
             href="https://www.instagram.com/bloody_kheeng/"
