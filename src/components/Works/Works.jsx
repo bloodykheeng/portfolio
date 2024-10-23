@@ -14,6 +14,10 @@ import { Link } from "react-scroll";
 import laravel from "../../img/works/laravel.png";
 import react from "../../img/works/React_Native_Logo.png";
 import ug_gov from "../../img/works/ug_gov.jpg";
+
+//
+import ReactGA from "react-ga4";
+
 const Works = () => {
   // context
   const theme = useContext(themeContext);
@@ -45,7 +49,16 @@ const Works = () => {
             and create intuitive user interfaces that enhance user experiences.
           </span>
 
-          <a href="mailto:kimerafarouk8@gmail.com">
+          <a
+            href="mailto:kimerafarouk8@gmail.com"
+            onClick={() => {
+              ReactGA.event({
+                category: "Contact",
+                action: "Click Hire Me",
+                label: "Email Hire"
+              });
+            }}
+          >
             <button className="button s-button">Hire Me</button>
           </a>
 

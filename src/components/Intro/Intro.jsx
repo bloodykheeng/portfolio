@@ -18,6 +18,9 @@ import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
+//
+import ReactGA from "react-ga4";
+
 const Intro = () => {
   // Transition
   const transition = { duration: 2, type: "spring" };
@@ -47,6 +50,13 @@ const Intro = () => {
           href="https://ko-fi.com/bloodykheeng"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => {
+            ReactGA.event({
+              category: "User",
+              action: "Click Hire Me or Buy Coffee", // Event action
+              label: "Hire Me Button" // Optional: label to describe the event
+            });
+          }}
         >
           <button className="button">Hire me or Buy me a Coffee ☕☕☕</button>
         </a>
@@ -57,20 +67,43 @@ const Intro = () => {
             href="https://github.com/bloodykheeng"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              ReactGA.event({
+                category: "Social Media",
+                action: "Click GitHub Icon",
+                label: "GitHub"
+              });
+            }}
           >
             <img src={Github} alt="Github" />
           </a>
+
           <a
             href="https://www.linkedin.com/in/kimerafarouk"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              ReactGA.event({
+                category: "Social Media",
+                action: "Click LinkedIn Icon",
+                label: "LinkedIn"
+              });
+            }}
           >
             <img src={LinkedIn} alt="LinkedIn" />
           </a>
+
           <a
             href="https://www.instagram.com/bloody_kheeng/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              ReactGA.event({
+                category: "Social Media",
+                action: "Click Instagram Icon",
+                label: "Instagram"
+              });
+            }}
           >
             <img src={Instagram} alt="Instagram" />
           </a>

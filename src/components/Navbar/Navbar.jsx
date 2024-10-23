@@ -5,6 +5,9 @@ import { Link } from "react-scroll";
 import { themeContext } from "../../Context";
 import { FiMenu, FiX } from "react-icons/fi"; // Hamburger icons
 
+//
+import ReactGA from "react-ga4";
+
 const Navbar = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
@@ -76,6 +79,13 @@ const Navbar = () => {
             href="https://wa.me/256774542872"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              ReactGA.event({
+                category: "Contact",
+                action: "Click WhatsApp Contact",
+                label: "WhatsApp"
+              });
+            }}
           >
             <button
               className="button n-button"

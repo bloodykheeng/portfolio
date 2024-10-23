@@ -8,6 +8,9 @@ import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import Resume from "./bloodykheeng_cv.pdf";
 
+//
+import ReactGA from "react-ga4";
+
 const Services = () => {
   // context
   const theme = useContext(themeContext);
@@ -27,9 +30,20 @@ const Services = () => {
         <span style={{ color: darkMode ? "white" : "" }}>Technologies &</span>
         <span>services</span>
 
-        <a href={Resume} download>
+        <a
+          href={Resume}
+          download
+          onClick={() => {
+            ReactGA.event({
+              category: "Download",
+              action: "Click Download CV",
+              label: "Resume"
+            });
+          }}
+        >
           <button className="button s-button">Download CV</button>
         </a>
+
         <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
       </div>
       {/* right */}
