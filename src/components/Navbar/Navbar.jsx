@@ -76,7 +76,7 @@ const Navbar = () => {
         {/* Contact button */}
         <div className="nav-contact-btn">
           <a
-            href="https://wa.me/256774542872"
+            href="https://wa.me/256707860666"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
