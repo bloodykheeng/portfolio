@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { ThemeProvider } from "./Context";
 
+import { PrimeReactProvider, PrimeReactContext } from "primereact/api";
+import "primereact/resources/themes/lara-light-cyan/theme.css";
+
 import ReactGA from "react-ga4";
 
 ReactGA.initialize("G-F0H49469FR");
@@ -16,7 +19,9 @@ ReactGA.send({
 
 ReactDOM.render(
   <ThemeProvider>
-    <App />
+    <PrimeReactProvider>
+      <App />
+    </PrimeReactProvider>
   </ThemeProvider>,
   document.getElementById("root")
 );

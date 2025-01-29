@@ -21,6 +21,10 @@ import { Link } from "react-scroll";
 //
 import ReactGA from "react-ga4";
 
+//
+import OlyCashPaymentDialog from "./OlyCashPaymentDialog";
+import OlyCashUserSetsPayment from "./OlyCashUserSetsPayment";
+
 const Intro = () => {
   // Transition
   const transition = { duration: 2, type: "spring" };
@@ -37,16 +41,18 @@ const Intro = () => {
           {/* yahan change hy darkmode ka */}
           <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
           <span>BK</span>
-          <span style={{ color: darkMode ? "white" : "black" }}>
+          <strong
+            style={{ color: darkMode ? "white" : "black", fontSize: "1rem" }}
+          >
             I am a versatile Full Stack Software Developer, passionate about
             creating intuitive user experiences through UI/UX design. I
             specialize in React.js, Laravel, and MySQL, with a proven ability to
             develop seamless, responsive, and visually engaging applications
             that meet both user needs and business objectives.
-          </span>
+          </strong>
         </div>
 
-        <a
+        {/* <a
           href="https://ko-fi.com/bloodykheeng"
           target="_blank"
           rel="noopener noreferrer"
@@ -59,7 +65,21 @@ const Intro = () => {
           }}
         >
           <button className="button">Hire me or Buy me a Coffee ☕☕☕</button>
-        </a>
+        </a> */}
+
+        {/* <h1>OlyCash Payment</h1> */}
+        {/* <OlyCashPaymentDialog /> */}
+        <div
+          onClick={() => {
+            ReactGA.event({
+              category: "User",
+              action: "Click Hire Me or Buy Coffee", // Event action
+              label: "Hire Me Button" // Optional: label to describe the event
+            });
+          }}
+        >
+          <OlyCashUserSetsPayment />
+        </div>
 
         {/* social icons */}
         <div className="i-icons">

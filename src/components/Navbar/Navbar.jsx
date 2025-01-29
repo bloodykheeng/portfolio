@@ -30,7 +30,7 @@ const Navbar = () => {
       {/* left */}
       <div className="n-left">
         <div className="n-name" style={{ color: darkMode ? "#fff" : "#000" }}>
-          BoodyKheeng
+          BloodyKheeng
         </div>
         <Toggle />
       </div>

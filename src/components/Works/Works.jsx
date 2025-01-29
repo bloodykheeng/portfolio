@@ -33,7 +33,7 @@ const Works = () => {
           <span style={{ color: darkMode ? "white" : "" }}>Some of the</span>
           <span>Brands & Clients</span>
           <span>I work with</span>
-          <span style={{ color: darkMode ? "white" : "" }}>
+          <span style={{ color: darkMode ? "white" : "", fontSize: "1rem" }}>
             Through my journey, I have worked on various web development
             <br />
             projects using React.js and modern JavaScript frameworks.

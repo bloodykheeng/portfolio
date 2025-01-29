@@ -37,6 +37,8 @@ const Footer = () => {
       <img src={Wave} alt="" style={{ width: "100%" }} />
       <div className="f-content">
         <span>
+          <br />
+          <br />
           <a
             href="mailto:kimerafarouk@nwt.ug"
             style={{
@@ -74,6 +76,34 @@ const Footer = () => {
             onMouseLeave={(e) => (e.target.style.color = "inherit")}
           >
             bloodykheeng@gmail.com
+          </a>
+
+          <br />
+          <a
+            href="tel:+256774542872"
+            style={{
+              cursor: "pointer",
+              textDecoration: "none",
+              color: "inherit"
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "blue")}
+            onMouseLeave={(e) => (e.target.style.color = "inherit")}
+          >
+            +256 774 542 872
+          </a>
+
+          <br />
+          <a
+            href="tel:+256707860666"
+            style={{
+              cursor: "pointer",
+              textDecoration: "none",
+              color: "inherit"
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "blue")}
+            onMouseLeave={(e) => (e.target.style.color = "inherit")}
+          >
+            +256 707 860 666
           </a>
         </span>
 

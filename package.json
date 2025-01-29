@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.2.1",
     "caniuse-lite": "^1.0.30001669",
     "framer-motion": "^6.2.8",
+    "primereact": "^10.9.2",
     "react": "^17.0.2",
     "react-burger-menu": "^3.0.9",
     "react-dom": "^17.0.2",
