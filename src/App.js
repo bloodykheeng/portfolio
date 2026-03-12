@@ -20,7 +20,7 @@ function App() {
       className="App"
       style={{
         background: darkMode ? "black" : "",
-        color: darkMode ? "white" : ""
+        color: darkMode ? "white" : "",
       }}
     >
       <Navbar />
@@ -32,7 +32,7 @@ function App() {
         <Projects />
         <Testimonial />
         {/* <Contact /> */}
-        <Drift appId="n5g59y7awvaw" />
+        {/* <Drift appId="n5g59y7awvaw" /> */}
       </div>
       <Footer />
     </div>
