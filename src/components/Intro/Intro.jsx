@@ -6,7 +6,7 @@ import boy from "../../img/boy.png";
 // // import bloodykheeng from "../../img/bloodykheeng.png";
 // import bloodykheeng from "../../img/PicsArt_04-19-06.50.24.png";
 // import bloodykheeng from "../../img/selfie_PicsArt_04-19-06.55.04.png";
-import bloodykheeng from "../../img/69955065.jpeg";
+import bloodykheeng from "../../img/bloodykheeng.jpeg";
 import glassesimoji from "../../img/glassesimoji.png";
 import thumbup from "../../img/thumbup.png";
 import crown from "../../img/crown.png";

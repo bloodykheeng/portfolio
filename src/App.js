@@ -10,7 +10,9 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import { useContext } from "react";
 import { themeContext } from "./Context";
-import Drift from "react-driftjs";
+// import Drift from "react-driftjs";
+
+import DriftWidget from "./components/Drift/DriftWidget";
 
 function App() {
   const theme = useContext(themeContext);
@@ -33,6 +35,7 @@ function App() {
         <Testimonial />
         {/* <Contact /> */}
         {/* <Drift appId="n5g59y7awvaw" /> */}
+        {/* <DriftWidget appId="n5g59y7awvaw" /> */}
       </div>
       <Footer />
     </div>

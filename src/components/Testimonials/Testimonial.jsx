@@ -3,7 +3,7 @@ import "./Testimonial.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { Pagination } from "swiper";
+import { Pagination } from "swiper/modules";
 import "swiper/css/pagination";
 import profilePic1 from "../../img/profile1.jpg";
 import profilePic2 from "../../img/profile2.jpg";
@@ -20,23 +20,23 @@ const Testimonial = () => {
     {
       img: client1,
       review:
-        "Bk You Know What , You’re really good at following up with the client so as to ensure that they are never left in the dark. Keep it up!."
+        "Bk You Know What , You’re really good at following up with the client so as to ensure that they are never left in the dark. Keep it up!.",
     },
     {
       img: client2,
       review:
-        "Your loyal customer base is outstanding. Customers often ask for you by name and you have a lot of repeat customers as a result. Great job!."
+        "Your loyal customer base is outstanding. Customers often ask for you by name and you have a lot of repeat customers as a result. Great job!.",
     },
     {
       img: client3,
       review:
-        "Bk I cant believe that Even when customers are difficult, you still manage to give them feedback in a timely and constructive manner.."
+        "Bk I cant believe that Even when customers are difficult, you still manage to give them feedback in a timely and constructive manner..",
     },
     {
       img: client4,
       review:
-        "You have the natural ability to understand and feel what your customers are experiencing, and you are able to meet their needs effectively. Well done!."
-    }
+        "You have the natural ability to understand and feel what your customers are experiencing, and you are able to meet their needs effectively. Well done!.",
+    },
   ];
 
   return (
@@ -64,7 +64,7 @@ const Testimonial = () => {
                 <div
                   style={{
                     background: `url(${client.img})`,
-                    backgroundSize: "cover"
+                    backgroundSize: "cover",
                   }}
                   className="testimonialImage"
                 ></div>

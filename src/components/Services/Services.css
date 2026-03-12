@@ -1,48 +1,67 @@
 .services {
-  padding: 0 3rem 0 3rem;
+  padding: 0 3rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   display: flex;
-  height: 30rem;
-  margin-bottom: 8rem;
-  /* margin-top: 9rem; */
-  margin-top: 10vh;
-  /* margin-bottom: 13rem; */
-  /* scroll view */
-  padding-top: 3rem;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-top: 8vh;
+  /* Enough bottom margin so the experience counters below don't overlap */
+  margin-bottom: 10rem;
 }
-/* left side */
+
+/* ── Left: heading + download button ─────────────────────────────────────── */
 .awesome {
   display: flex;
   flex-direction: column;
   position: relative;
-  /* gap: 20px; */
+  flex: 0 0 220px;
+  padding-top: 0.5rem;
 }
 
 .awesome > :nth-child(1) {
   color: var(--black);
   font-size: 2.5rem;
   font-weight: bold;
+  line-height: 1.2;
 }
 .awesome > :nth-child(2) {
   color: var(--orange);
   font-size: 2.5rem;
   font-weight: bold;
+  line-height: 1.2;
 }
 .awesome > :nth-child(3) {
   color: var(--gray);
   font-size: 14px;
   margin-top: 1rem;
 }
+
 .s-button {
-  width: 8rem;
-  height: 2rem;
-  margin-top: 1rem;
+  width: 9rem;
+  height: 2.4rem;
+  margin-top: 1.5rem;
 }
-/* right sided */
+
+/* ── Right: cards row ────────────────────────────────────────────────────── */
 .cards {
-  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
 }
+
+/* Each motion.div wrapper must fill and not override its child's layout */
 .cards > * {
-  position: absolute;
+  /* Remove the old position:absolute that was collapsing the container */
+  position: static !important;
+  /* Let the card dictate its own width; wrapper just participates in flex */
+  flex: 1 1 180px;
+  max-width: 260px;
+  display: flex;
 }
 
 /* blur */
@@ -56,21 +75,28 @@
   left: -18rem;
 }
 
-@media screen and (max-width: 480px) {
+/* ── Mobile ──────────────────────────────────────────────────────────────── */
+@media screen and (max-width: 768px) {
   .services {
-    margin-top: 0;
     flex-direction: column;
-    gap: 5rem;
-    height: 66rem;
-    padding: 0;
+    gap: 2.5rem;
+    padding: 2rem 1.5rem;
+    margin-top: 0;
+    margin-bottom: 8rem;
+  }
+
+  .awesome {
+    flex: unset;
   }
 
   .cards {
-    display: flex;
     flex-direction: column;
-    gap: 17rem;
+    align-items: stretch;
+    width: 100%;
   }
+
   .cards > * {
-    position: static;
+    max-width: 100%;
+    flex: unset;
   }
 }

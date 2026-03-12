@@ -16,17 +16,26 @@ const Services = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
 
-  // transition
-  const transition = {
-    duration: 1,
-    type: "spring",
-  };
+  // Fade-up animation — works with flex/grid layout (no left/top offsets
+  // which only work when position:absolute is set).
+  // Each card staggers in 0.15s apart for a clean cascade effect.
+  const fadeUp = (delay = 0) => ({
+    initial: { opacity: 0, y: 60 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: false, amount: 0.2 },
+    transition: {
+      duration: 0.7,
+      delay,
+      type: "spring",
+      stiffness: 70,
+      damping: 14,
+    },
+  });
 
   return (
     <div className="services" id="services">
-      {/* left side */}
+      {/* ── Left side: heading + download ─────────────────────────────── */}
       <div className="awesome">
-        {/* dark mode */}
         <span style={{ color: darkMode ? "white" : "" }}>Technologies &</span>
         <span>services</span>
 
@@ -44,42 +53,33 @@ const Services = () => {
           <button className="button s-button">Download CV</button>
         </a>
 
-        <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
+        <div className="blur s-blur1" style={{ background: "#ABF1FF94" }} />
       </div>
-      {/* right */}
+
+      {/* ── Right side: cards ─────────────────────────────────────────── */}
       <div className="cards">
-        {/* first card */}
-        <motion.div
-          initial={{ left: "25rem" }}
-          whileInView={{ left: "14rem" }}
-          transition={transition}
-        >
+        {/* Card 1 — Design */}
+        <motion.div {...fadeUp(0)}>
           <Card
             emoji={HeartEmoji}
             heading={"Design"}
             detail={"Adobe xd, Photoshop, Adobe Illustrator, "}
           />
         </motion.div>
-        {/* second card */}
-        <motion.div
-          initial={{ left: "-11rem", top: "12rem" }}
-          whileInView={{ left: "-4rem" }}
-          transition={transition}
-        >
+
+        {/* Card 2 — Front End */}
+        <motion.div {...fadeUp(0.15)}>
           <Card
             emoji={Glasses}
             heading={"Front End"}
             detail={
-              "Html, Css, JavaScript,Nextjs Reactjs, Bootstrap, Tailwind, Material Ui"
+              "Html, Css, JavaScript, Nextjs, Reactjs, Bootstrap, Tailwind, Material Ui"
             }
           />
         </motion.div>
-        {/* 3rd */}
-        <motion.div
-          initial={{ top: "19rem", left: "25rem" }}
-          whileInView={{ left: "12rem" }}
-          transition={transition}
-        >
+
+        {/* Card 3 — Backend */}
+        <motion.div {...fadeUp(0.3)}>
           <Card
             emoji={Humble}
             heading={"Backend"}
@@ -87,10 +87,6 @@ const Services = () => {
             color="rgba(252, 166, 31, 0.45)"
           />
         </motion.div>
-        {/* <div
-          className="blur s-blur2"
-          style={{ background: "var(--purple)" }}
-        ></div> */}
       </div>
     </div>
   );
