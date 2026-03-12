@@ -19,7 +19,7 @@ const Services = () => {
   // transition
   const transition = {
     duration: 1,
-    type: "spring"
+    type: "spring",
   };
 
   return (
@@ -37,7 +37,7 @@ const Services = () => {
             ReactGA.event({
               category: "Download",
               action: "Click Download CV",
-              label: "Resume"
+              label: "Resume",
             });
           }}
         >
@@ -70,7 +70,7 @@ const Services = () => {
             emoji={Glasses}
             heading={"Front End"}
             detail={
-              "Html, Css, JavaScript, React, Bootstrap, Tailwind, Material Ui"
+              "Html, Css, JavaScript,Nextjs Reactjs, Bootstrap, Tailwind, Material Ui"
             }
           />
         </motion.div>

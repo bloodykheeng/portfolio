@@ -46,9 +46,9 @@ const Intro = () => {
           >
             I am a versatile Full Stack Software Developer, passionate about
             creating intuitive user experiences through UI/UX design. I
-            specialize in React.js, Laravel, and MySQL, with a proven ability to
-            develop seamless, responsive, and visually engaging applications
-            that meet both user needs and business objectives.
+            specialize in Nextjs, Reactjs, Laravel, and MySQL, with a proven
+            ability to develop seamless, responsive, and visually engaging
+            applications that meet both user needs and business objectives.
           </strong>
         </div>
 
@@ -74,7 +74,7 @@ const Intro = () => {
             ReactGA.event({
               category: "User",
               action: "Click Hire Me or Buy Coffee", // Event action
-              label: "Hire Me Button" // Optional: label to describe the event
+              label: "Hire Me Button", // Optional: label to describe the event
             });
           }}
         >
@@ -91,7 +91,7 @@ const Intro = () => {
               ReactGA.event({
                 category: "Social Media",
                 action: "Click GitHub Icon",
-                label: "GitHub"
+                label: "GitHub",
               });
             }}
           >
@@ -106,7 +106,7 @@ const Intro = () => {
               ReactGA.event({
                 category: "Social Media",
                 action: "Click LinkedIn Icon",
-                label: "LinkedIn"
+                label: "LinkedIn",
               });
             }}
           >
@@ -121,7 +121,7 @@ const Intro = () => {
               ReactGA.event({
                 category: "Social Media",
                 action: "Click Instagram Icon",
-                label: "Instagram"
+                label: "Instagram",
               });
             }}
           >
@@ -171,7 +171,7 @@ const Intro = () => {
             top: "17rem",
             width: "21rem",
             height: "11rem",
-            left: "-9rem"
+            left: "-9rem",
           }}
         ></div>
       </div>

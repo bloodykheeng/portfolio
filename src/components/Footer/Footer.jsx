@@ -40,37 +40,25 @@ const Footer = () => {
           <br />
           <br />
           <a
-            href="mailto:kimerafarouk@nwt.ug"
+            href="mailto:kimerafarouk8@gmail.com"
             style={{
               cursor: "pointer",
               textDecoration: "none",
-              color: "inherit"
+              color: "inherit",
             }}
             onMouseEnter={(e) => (e.target.style.color = "blue")}
             onMouseLeave={(e) => (e.target.style.color = "inherit")}
           >
-            kimerafarouk@nwt.ug
+            kimerafarouk8@gmail.com
           </a>
           <br />
-          <a
-            href="mailto:kimerafarouk8@nwt.ug"
-            style={{
-              cursor: "pointer",
-              textDecoration: "none",
-              color: "inherit"
-            }}
-            onMouseEnter={(e) => (e.target.style.color = "blue")}
-            onMouseLeave={(e) => (e.target.style.color = "inherit")}
-          >
-            kimerafarouk8@nwt.ug
-          </a>
-          <br />
+
           <a
             href="mailto:bloodykheeng@gmail.com"
             style={{
               cursor: "pointer",
               textDecoration: "none",
-              color: "inherit"
+              color: "inherit",
             }}
             onMouseEnter={(e) => (e.target.style.color = "blue")}
             onMouseLeave={(e) => (e.target.style.color = "inherit")}
@@ -80,11 +68,25 @@ const Footer = () => {
 
           <br />
           <a
+            href="mailto:kimerafarouk@nwt.ug"
+            style={{
+              cursor: "pointer",
+              textDecoration: "none",
+              color: "inherit",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "blue")}
+            onMouseLeave={(e) => (e.target.style.color = "inherit")}
+          >
+            kimerafarouk@nwt.ug
+          </a>
+          <br />
+
+          <a
             href="tel:+256774542872"
             style={{
               cursor: "pointer",
               textDecoration: "none",
-              color: "inherit"
+              color: "inherit",
             }}
             onMouseEnter={(e) => (e.target.style.color = "blue")}
             onMouseLeave={(e) => (e.target.style.color = "inherit")}
@@ -98,7 +100,7 @@ const Footer = () => {
             style={{
               cursor: "pointer",
               textDecoration: "none",
-              color: "inherit"
+              color: "inherit",
             }}
             onMouseEnter={(e) => (e.target.style.color = "blue")}
             onMouseLeave={(e) => (e.target.style.color = "inherit")}
@@ -151,7 +153,7 @@ const Footer = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            zIndex: "100"
+            zIndex: "100",
           }}
         >
           <Link activeClass="active" to="Intro" spy={true} smooth={true}>
